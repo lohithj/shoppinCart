@@ -67,6 +67,7 @@ const RemoveProduct = styled.div`
   margin: 90px 0px;
   font-family: 'Syncopate', sans-serif;
   position: relative;
+  cursor: pointer;
 `;
 
 const Cross = styled.div`

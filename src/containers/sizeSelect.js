@@ -9,6 +9,7 @@ const SizeDiv = styled.div`
   margin: 7px auto;
   padding: 0  3px 5px 3px;
   border : ${(props) => (props.selected) ? '2px dashed #000' : ''};
+  cursor: pointer;
 `;
 
 const Div = styled.div`

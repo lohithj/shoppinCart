@@ -10,6 +10,7 @@ const Button = styled.div`
   background-color: #fff;
   margin: 10px auto;
   padding: 3px 0px;
+  cursor: pointer;
 `;
 
 const Div = styled.div`

@@ -14,6 +14,7 @@ const Icon = styled.div`
   text-align: center;
   border-radius: 3px;
   margin: 20px;
+  cursor: pointer;
 `;
 
 const Input = styled.input`

@@ -7,6 +7,7 @@ const ColorDiv = styled.div`
   width: 15px;
   height: 15px;
   margin: 5px auto;
+  cursor: pointer;
   border : ${(props) => (props.selected) ? '2px dashed #000' : ''};
 `;
 
