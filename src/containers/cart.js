@@ -11,6 +11,11 @@ const Div = styled.div`
   margin: 30px 0;
   padding-right: 30px;
   min-height: 90vh;
+  @media only screen and (max-width: 450px){
+    width: 100%;
+    margin: auto;
+    padding-right: 0px;
+  }
 `;
 
 const Span = styled.div`

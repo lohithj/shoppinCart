@@ -8,6 +8,9 @@ import styled from 'styled-components';
 
 const Div = styled.div`
   display : flex;
+  @media only screen and (max-width: 450px){
+    flex-direction: column;
+  }
 `;
 
 class CartCheckout extends React.Component{
@@ -34,7 +37,7 @@ class CartCheckout extends React.Component{
     return(
       <Div>
         <Cart ref='cart'/>
-        <Checkout style={{...this.props.style,width:'40%',position:fixIt?'fixed':'relative',marginLeft:fixIt?'59%':''}} />
+        <Checkout style={{...this.props.style,position:fixIt?'fixed':'relative',marginLeft:fixIt?'59%':''}} />
       </Div>
     );
   }

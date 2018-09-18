@@ -45,6 +45,10 @@ const Div = styled.div`
   margin: 20px;
   padding: 20px;
   border-bottom: 2px dashed #00b9dc;
+  @media only screen and (max-width: 450px){
+    margin: auto;
+    padding: 0px;
+  }
 `;
 
 class PromoBox extends React.Component{

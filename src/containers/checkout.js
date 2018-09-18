@@ -7,7 +7,14 @@ import PropTypes from 'prop-types';
 
 const Div = styled.div`
   margin: 30px 0;
+  width: 40%;
   font-family: 'Lato', sans-serif;
+  @media only screen and (max-width: 450px){
+    width: 100%;
+    margin: 0px;
+    position: relative !important;
+    margin: auto !important;
+  }
 `;
 
 const ValuesCont = styled.div`
