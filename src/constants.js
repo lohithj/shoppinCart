@@ -4,6 +4,8 @@ export const REMOVE_CART_ITEM = 'REMOVE_CART_ITEM';
 export const UPDATE_CART_ITEM_QUANTITY = 'UPDATE_CART_ITEM_QUANTITY';
 export const UPDATE_CART_ITEM_COLOR = 'UPDATE_CART_ITEM_COLOR';
 export const UPDATE_CART_ITEM_SIZE = 'UPDATE_CART_ITEM_SIZE';
+export const SAVE_FOR_LATER = 'SAVE_FOR_LATER';
+export const ADD_TO_CART = 'ADD_TO_CART';
 
 export const raw = [
    {

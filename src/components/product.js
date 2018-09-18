@@ -57,6 +57,7 @@ const SaveBtn = styled.div`
   text-align: center;
   background-color: #74EBD5;
   background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+  cursor: pointer;
 `;
 
 const RemoveProduct = styled.div`
@@ -93,10 +94,10 @@ const Cross = styled.div`
 `;
 
 const SelectionCont = styled.div`
-  display: flex;
+  display : ${(props) => (props.type=='cart') ? 'flex' : 'none'};
 `;
 
-const Product = ({id,url,name,style,color,size,quantity,orgprice,price,currency,options,onRemove}) => (
+const Product = ({id,url,name,style,color,size,quantity,orgprice,price,currency,options,onRemove,saveItem,type}) => (
   <ProductCont>
     <Img src={url}></Img>
     <ProductDetails>
@@ -105,12 +106,12 @@ const Product = ({id,url,name,style,color,size,quantity,orgprice,price,currency,
         <Price>{orgprice!=price?(currency+' '+orgprice+'.00'):''}</Price>
         <OrgPrice>{currency+' '+price+'.00'}</OrgPrice>
       </PriceCont>
-      <SelectionCont>
+      <SelectionCont type={type}>
         <SizeSelect selected={size} id={id} options={options.sizes}></SizeSelect>
         <QuantitySelect quantity={quantity} id={id}></QuantitySelect>
         <ColorSelect selected={color} id={id} options={options.colors}></ColorSelect>
       </SelectionCont>
-      <SaveBtn>SAVE FOR LATER</SaveBtn>
+      <SaveBtn onClick={saveItem}>{type=='cart'?'SAVE FOR LATER':'ADD TO CART'}</SaveBtn>
     </ProductDetails>
     <RemoveProduct onClick={onRemove}><Cross></Cross></RemoveProduct>
   </ProductCont>
@@ -126,7 +127,8 @@ Product.propTypes = {
   quantity: PropTypes.number.isRequired,
   price: PropTypes.number.isRequired,
   currency: PropTypes.string.isRequired,
-  onRemove: PropTypes.func.isRequired
+  onRemove: PropTypes.func.isRequired,
+  saveItem: PropTypes.func.isRequired
 }
 
 export default Product;

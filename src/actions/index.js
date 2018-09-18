@@ -27,3 +27,15 @@ export const updateCartItemColor = (payload) => ({
   type: 'UPDATE_CART_ITEM_COLOR',
   payload
 })
+
+export const saveForLater = (payload) => {
+  return({
+    type: 'SAVE_FOR_LATER',
+    payload
+  })
+}
+
+export const addToCart = (payload) => ({
+  type: 'ADD_TO_CART',
+  payload
+})

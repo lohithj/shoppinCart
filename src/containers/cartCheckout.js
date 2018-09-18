@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import PromoBox from './promoBox.js';
 import Cart from '../containers/cart.js'
+import Saved from '../containers/saved.js'
 import Checkout from '../containers/checkout.js'
 import styled from 'styled-components';
 
@@ -35,10 +36,13 @@ class CartCheckout extends React.Component{
   render(){
     let { fixIt } = this.state;
     return(
-      <Div>
-        <Cart ref='cart'/>
-        <Checkout style={{...this.props.style,position:fixIt?'fixed':'relative',marginLeft:fixIt?'59%':''}} />
-      </Div>
+      <div>
+        <Div>
+          <Cart type="cart" ref='cart'/>
+          <Checkout style={{...this.props.style,position:fixIt?'fixed':'relative',marginLeft:fixIt?'59%':'',top:fixIt?'0px':''}} />
+        </Div>
+        <Cart type="saved" />
+      </div>
     );
   }
 }
